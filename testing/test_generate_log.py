@@ -23,6 +23,7 @@ def test_log_file_created(generated_file):
 def test_log_file_name_format(generated_file):
     """Test that the filename follows the expected naming convention."""
     today = datetime.now().strftime("%Y%m%d")
+    print(generated_file)
     assert generated_file == f"log_{today}.txt", "Filename does not match expected format."
 
 def test_log_file_content_matches_input(generated_file, log_data):
