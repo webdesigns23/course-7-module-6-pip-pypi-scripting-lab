@@ -14,15 +14,15 @@ def generate_log(data):
     print(f"Log written to {filename}")
     return filename
 
-# def fetch_data():
-#     response = requests.get("https://jsonplaceholder.typicode.com/posts")
-#     if response.status_code == 200:
-#         return response.json()
-#     return {}
+def fetch_data():
+    response = requests.get("https://jsonplaceholder.typicode.com/posts")
+    if response.status_code == 200:
+        return response.json()
+    return {}
 
-# if __name__ == "__main__":
-#     posts = fetch_data()
-#     data = []
-#     for post in posts:
-#         data.append(post.get("title"))
-#     generate_log(data)
+if __name__ == "__main__":
+    posts = fetch_data()
+    data = []
+    for post in posts:
+        data.append(post.get("title"))
+    generate_log(data)
